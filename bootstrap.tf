@@ -1,7 +1,7 @@
 #terraform-bluegreen-tut
 
 variable "infrastructure_version" {
-	default = "1"
+	default = "2"
 }
 
 provider "aws" {
@@ -13,7 +13,7 @@ terraform {
     encrypt = true
     bucket = "terraform-bluegreen-tut"
     region = "us-west-2"
-    key = "v1"
+    key = "v2"
   }
 }
 

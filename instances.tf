@@ -11,7 +11,7 @@ locals {
 resource "aws_instance" "terraform-bluegreen-tut" {
   count = 3
   ami = "ami-baa236c2"
-  instance_type = "t2.micro"
+  instance_type = "t2.small"
   subnet_id = "${element(local.subnets, count.index)}"
   vpc_security_group_ids = ["${aws_security_group.terraform-bluegreen-tut.id}"]
   key_name = "${aws_key_pair.terraform-bluegreen-tut.key_name}"
