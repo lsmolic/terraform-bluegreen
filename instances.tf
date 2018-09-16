@@ -9,7 +9,7 @@ locals {
 }
 
 resource "aws_instance" "terraform-bluegreen-tut" {
-  count = 3
+  count = 2
   ami = "ami-baa236c2"
   instance_type = "t2.small"
   subnet_id = "${element(local.subnets, count.index)}"
